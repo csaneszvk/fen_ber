@@ -29,7 +29,7 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 ``` r
-ros2 launch fen_ber launch_example1.launch.py
+ros2 launch fen_ber virag_launch.py
 ```
 
 <p align="center"><img src="img/use_this_template01.png" width="60%" /></p>
@@ -53,3 +53,15 @@ The easiest way is VS code:
 > Don't forget to rename the directory (folder) and the file too.
 
 Now `colcon build` your ROS 2 package and you can start wokring.
+```mermaid
+graph TD
+    A[Start] --> B[Launch turtlesim node]
+    A --> C[Launch virag node]
+    
+    B --> D[turtlesim_node]
+    C --> E[virag_node]
+
+    E --> F[Publish to /turtle1/cmd_vel]
+    D --> G[Subscribe to /turtle1/cmd_vel]
+    G --> F
+```
