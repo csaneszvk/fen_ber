@@ -20,16 +20,14 @@ cd ~/ros2_ws
 colcon build --packages-select fen_ber --symlink-install
 ```
 
-<details>
-<summary> Don't forget to source before ROS commands.</summary>
-
+Source the program
 ``` bash
 source ~/ros2_ws/install/setup.bash
 ```
-</details>
 
+Launch the program
 ``` r
-ros2 launch fen_ber cmd_gen_node.py
+ros2 launch fen_ber virag_launch.py
 ```
 Now `colcon build` your ROS 2 package and you can start wokring.
 ```mermaid
