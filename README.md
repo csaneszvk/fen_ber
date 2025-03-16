@@ -26,8 +26,9 @@ source ~/ros2_ws/install/setup.bash
 ```
 
 Launch the program
+(Kellenek az idézőjelek és a virag elötti space is!)
 ``` r
-ros2 launch fen_ber ' virag_launch.py' (Kellenek az idézőjelek és a virag elötti space is!)
+ros2 launch fen_ber ' virag_launch.py'
 ```
 Now `colcon build` your ROS 2 package and you can start wokring.
 ```mermaid
