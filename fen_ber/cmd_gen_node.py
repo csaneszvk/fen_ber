@@ -43,9 +43,9 @@ class virag(Node):
 
 def main(args=None):
     rclpy.init(args=args) 
-    smiley_face_drawer = virag() 
-    rclpy.spin(smiley_face_drawer)
-    smiley_face_drawer.destroy_node() 
+    viragrajzolo = virag() 
+    rclpy.spin(viragrajzolo)
+    viragrajzolo.destroy_node() 
     rclpy.shutdown()
 
 if __name__ == '__main__':

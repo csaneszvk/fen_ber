@@ -33,10 +33,10 @@ Now `colcon build` your ROS 2 package and you can start wokring.
 ```mermaid
 graph TD
     A[Start] --> B[Launch turtlesim node]
-    A --> C[Launch virag node]
+    A --> C[Launch virag_launch]
     
     B --> D[turtlesim_node]
-    C --> E[virag_node]
+    C --> E[cmd_gen_node]
 
     E --> F[Publish to /turtle1/cmd_vel]
     D --> G[Subscribe to /turtle1/cmd_vel]
