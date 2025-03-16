@@ -13,7 +13,7 @@ class virag(Node):
 
     def loop(self):
         if self.cycle_count >= 7:  
-            self.get_logger().info('Virág rajzolás befejeződött.') 
+            self.get_logger().info('Virág rajzolás befejeződött.')  
             self.destroy_node()  
             rclpy.shutdown()  
             return
@@ -34,7 +34,19 @@ class virag(Node):
                 cmd_msg.linear.x = 0.0  
                 cmd_msg.angular.z = 0.0
 
-        # Virágszál és virág rajzoló számláló rész
+       
         else:
             self.loop_count = 0
-            self.cycle_count += 1
+            self.cycle_count += 1  
+
+        self.cmd_pub.publish(cmd_msg)
+        self.loop_count += 1 
+
+def main(args=None):
+    rclpy.init(args=args) 
+    viragrajzolo = virag() 
+    rclpy.spin(viragrajzolo)
+    viragrajzolo.destroy_node() 
+    rclpy.shutdown()  
+if __name__ == '__main__':
+    main()
