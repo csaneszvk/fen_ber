@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'cmd_gen_node= fen_ber.cmd_gen_node:main',
+            'cmd_gen_node.py = fen_ber.cmd_gen_node:main',
         ],
     },
 )
